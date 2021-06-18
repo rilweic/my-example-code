@@ -55,3 +55,5 @@ hs_err_pid*
 .project
 .settings/
 target/
+!**/src/main/**/target/
+!**/src/test/**/target/
