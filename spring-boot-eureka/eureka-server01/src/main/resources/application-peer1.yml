@@ -6,6 +6,10 @@ eureka:
     hostname: lichao
 #    prefer-ip-address: true
 #    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  server:
+    # 关闭自我保护模式
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 30000 # 单位毫秒
   client:
     register-with-eureka: true
     fetch-registry: true

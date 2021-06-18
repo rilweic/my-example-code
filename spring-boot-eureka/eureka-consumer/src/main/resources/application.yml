@@ -14,5 +14,5 @@ eureka:
     serviceUrl:
       defaultZone: http://rilweic:8762/eureka/,http://lichao:8761/eureka/
 
-    register-with-eureka: false # 不将自己注册到服务中心
+    register-with-eureka: false # 消费端，不将自己注册到服务中心。不作为其他服务可调用的服务
     registry-fetch-interval-seconds: 10

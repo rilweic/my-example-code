@@ -20,7 +20,7 @@
         <module>spring-boot-eureka/eureka-provider</module>
         <module>spring-boot-eureka/eureka-server-standalone</module>
         <module>spring-boot-eureka/eureka-server01</module>
-        <module>spring-boot-eureka/eureka-server03</module>
+        <module>spring-boot-eureka/eureka-server02</module>
     </modules>
 
     <properties>
