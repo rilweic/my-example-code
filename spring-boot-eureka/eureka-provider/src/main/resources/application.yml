@@ -10,4 +10,5 @@ eureka:
   #    instance-id: ${spring.cloud.client.ip-address}:${server.port}
   client:
     serviceUrl:
+      # 表示注册到具体的Eureka服务上
       defaultZone: http://rilweic:8762/eureka/,http://lichao:8761/eureka/

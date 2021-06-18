@@ -1,5 +1,6 @@
 spring:
   profiles:
+    # 两个配置文件，分别启用不同的配置来表示不同的eureka服务
     active: peer1
   application:
     name: Eureka-Server

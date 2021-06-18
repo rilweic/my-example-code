@@ -10,4 +10,5 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
+      # 当前服务注册到另一个server上，两个服务互相注册
       defaultZone: http://lichao:8761/eureka/
