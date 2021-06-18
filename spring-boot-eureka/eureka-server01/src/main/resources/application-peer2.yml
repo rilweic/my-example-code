@@ -1,0 +1,13 @@
+server:
+  port: 8762
+
+eureka:
+  instance:
+    hostname: rilweic
+#    prefer-ip-address: true
+#    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://lichao:8761/eureka/

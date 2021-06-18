@@ -1,0 +1,18 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: eureka-consume
+eureka:
+
+#  instance:
+#    hostname: lichao
+
+  #    prefer-ip-address: true
+  #    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://rilweic:8762/eureka/,http://lichao:8761/eureka/
+
+    register-with-eureka: false # 不将自己注册到服务中心
+    registry-fetch-interval-seconds: 10

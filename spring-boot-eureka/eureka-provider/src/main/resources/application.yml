@@ -1,0 +1,13 @@
+server:
+  port: 7070
+spring:
+  application:
+    name: eureka-provider
+eureka:
+#  instance:
+#    hostname: lichao
+  #    prefer-ip-address: true
+  #    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://rilweic:8762/eureka/,http://lichao:8761/eureka/
