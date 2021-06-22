@@ -1,0 +1,23 @@
+server:
+  port: 7071
+spring:
+  application:
+    name: eureka-provider
+eureka:
+#  instance:
+#    hostname: lichao
+  #    prefer-ip-address: true
+  #    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    serviceUrl:
+      # 表示注册到具体的Eureka服务上
+      defaultZone: http://rilweic:8762/eureka/,http://lichao:8761/eureka/
+# 度量指标监控检查
+management:
+  endpoints:
+    web:
+      exposure:
+        include: shutdown # 开启shutdown端点访问
+  endpoint:
+    shutdown:
+      enabled: true # 开启shutdown 实现优雅停服

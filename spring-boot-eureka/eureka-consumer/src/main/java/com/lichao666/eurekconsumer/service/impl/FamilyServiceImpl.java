@@ -42,6 +42,7 @@ public class FamilyServiceImpl implements FamilyService {
         StringBuilder sb = new StringBuilder();
         // 拼接服务地址
         sb.append("http://").append(serviceInstance.getHost()).append(":").append(serviceInstance.getPort()).append("/list");
+        System.out.println("----------\t"+sb+"----------");
         ResponseEntity<List<User>> responseEntity = restTemplate.exchange(sb.toString(), HttpMethod.GET, null, new ParameterizedTypeReference<List<User>>() {
         });
 

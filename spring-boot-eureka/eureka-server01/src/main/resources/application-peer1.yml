@@ -15,4 +15,4 @@ eureka:
     fetch-registry: true
     serviceUrl:
       # 当前服务注册到另一个server上，两个服务互相注册
-      defaultZone: http://rilweic:8762/eureka/
+      defaultZone: http://localhost:8762/eureka/
