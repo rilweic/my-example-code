@@ -21,6 +21,7 @@
         <module>spring-boot-eureka/eureka-server-standalone</module>
         <module>spring-boot-eureka/eureka-server01</module>
         <module>spring-boot-eureka/eureka-server02</module>
+        <module>design-pattern</module>
     </modules>
 
     <properties>
