@@ -1,0 +1,3 @@
+# mapreduce程序
+
+MapReduce程序运行需要将对应的程序打包成jar包然后运行

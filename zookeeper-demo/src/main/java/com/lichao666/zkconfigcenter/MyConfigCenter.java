@@ -10,8 +10,8 @@ import java.util.concurrent.CountDownLatch;
 
 public class MyConfigCenter implements Watcher {
 
-    public static final String ZKCONNECTION = "10.124.128.202:2181,10.124.128.203:2181,10.124.128.204:2181";
-//    public static final String ZKCONNECTION = "192.168.66.201:2181,192.168.66.202:2181,192.168.66.203:2181";
+//    public static final String ZKCONNECTION = "10.124.128.202:2181,10.124.128.203:2181,10.124.128.204:2181";
+    public static final String ZKCONNECTION = "192.168.66.201:2181,192.168.66.202:2181,192.168.66.203:2181";
 
     CountDownLatch countDownLatch = new CountDownLatch(1);
     ZooKeeper zkCli;

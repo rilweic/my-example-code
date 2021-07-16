@@ -22,6 +22,7 @@
         <module>spring-boot-eureka/eureka-server01</module>
         <module>spring-boot-eureka/eureka-server02</module>
         <module>design-pattern</module>
+        <module>kafka-demo</module>
     </modules>
 
     <properties>
