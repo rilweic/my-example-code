@@ -16,7 +16,7 @@ public class NewProducer {
         // 消息发送最大尝试次数
         props.put("retries", 0);
         // 一批消息处理大小
-        props.put("batch.size", 16384);
+        props.put("batch.size",  16384);
         // 请求延时
         props.put("linger.ms", 1);
         // 发送缓存区内存大小
