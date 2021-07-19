@@ -13,7 +13,7 @@ public class TopicAction {
 
         ZkUtils zkUtils = ZkUtils.apply("node1:2181", 30000, 30000, JaasUtils.isZkSecurityEnabled());
 // 创建一个单分区单副本名为t1的topic
-        AdminUtils.createTopic(zkUtils, "first1", 3, 3, new Properties(), RackAwareMode.Enforced$.MODULE$);
+        AdminUtils.createTopic(zkUtils, "first", 3, 3, new Properties(), RackAwareMode.Enforced$.MODULE$);
         zkUtils.close();
     }
 }

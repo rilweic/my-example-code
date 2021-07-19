@@ -29,7 +29,7 @@ public class PartitionerProducer {
         props.put("partitioner.class", "com.lichao666.procuder.partition.CustomPartitioner");
 
         Producer<String, String> producer = new KafkaProducer<>(props);
-        producer.send(new ProducerRecord<String, String>("first1", "1", "lichao666"));
+        producer.send(new ProducerRecord<String, String>("first", "1", "lichao666"));
         producer.close();
     }
 }
