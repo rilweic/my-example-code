@@ -23,6 +23,7 @@
         <module>spring-boot-eureka/eureka-server02</module>
         <module>design-pattern</module>
         <module>kafka-demo</module>
+        <module>juc</module>
     </modules>
 
     <properties>
