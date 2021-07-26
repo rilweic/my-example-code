@@ -20,7 +20,7 @@ class FairReentrantlock implements Runnable{
     public void run() {
         for (int i = 0; i < 100; i++) {
             lock.lock();
-            System.out.println(Thread.currentThread().getName()+"获得锁");
+            System.out.println(Thread.currentThread().getName()+"获得了锁");
             lock.unlock();
         }
     }
