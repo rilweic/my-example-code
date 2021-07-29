@@ -24,6 +24,7 @@
         <module>design-pattern</module>
         <module>kafka-demo</module>
         <module>juc</module>
+        <module>scala-demo</module>
     </modules>
 
     <properties>
