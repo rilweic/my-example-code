@@ -25,7 +25,7 @@ public class Demo {
         SquarePeg largeSqPeg = new SquarePeg(20);
         // EN: hole.fits(smallSqPeg); // Won't compile.
         //
-        // RU: hole.fits(smallSqPeg); // Не скомпилируется.
+        // RU: hole.fits(smallSqPeg); // Не скомпилируется.z
 
         // EN: Adapter solves the problem.
         //

@@ -25,6 +25,7 @@
         <module>kafka-demo</module>
         <module>juc</module>
         <module>scala-demo</module>
+        <module>spark-demo</module>
     </modules>
 
     <properties>

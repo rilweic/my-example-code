@@ -6,7 +6,7 @@ import scala.collection.JavaConversions._
  * Created by lichao on 16-5-27.
  */
 object MapTest extends App {
-  var obj = new MyMap;
+  var obj = new MyMap
   //  var map :scala.collection.mutable.Map[String,String] = obj.getMap;
   val map: scala.collection.mutable.Map[String, String] = obj.getMap()
   for ((k, v) <- map) {

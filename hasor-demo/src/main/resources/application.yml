@@ -1,0 +1,17 @@
+HASOR_DATAQL_DATAWAY: true
+
+HASOR_DATAQL_DATAWAY_ADMIN: true
+
+HASOR_DATAQL_DATAWAY_API_URL: /api/
+
+HASOR_DATAQL_DATAWAY_UI_URL: /interface-ui/
+
+HASOR_DATAQL_FX_PAGE_DIALECT: mysql
+
+spring:
+  datasource:
+    #    最好用的数据源，速度最快 HikariCP
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: root

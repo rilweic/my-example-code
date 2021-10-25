@@ -8,7 +8,7 @@ import java.util.Map;
 public class CustomPartitioner implements Partitioner {
     @Override
     public int partition(String s, Object o, byte[] bytes, Object o1, byte[] bytes1, Cluster cluster) {
-        return 0;
+        return 2;
     }
 
     @Override

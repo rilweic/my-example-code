@@ -1,0 +1,58 @@
+{
+  "job": {
+    "setting": {
+      "speed": {
+        "channel": 3,
+        "byte": 1048576
+      },
+      "errorLimit": {
+        "record": 0,
+        "percentage": 0.02
+      }
+    },
+    "content": [
+      {
+        "reader": {
+          "name": "hdfsreader",
+          "parameter": {
+            "path": "/lichao/user.txt",
+            "defaultFS": "hdfs://192.168.66.222:8020",
+            "fileType": "text",
+            "fieldDelimiter": ",",
+            "column": [
+              {
+                "index": "0",
+                "type": "STRING"
+              },
+              {
+                "index": "1",
+                "type": "STRING"
+              }
+            ]
+          }
+        },
+        "writer": {
+          "name": "hdfswriter",
+          "parameter": {
+            "defaultFS": "hdfs://192.168.66.222:8020",
+            "fileType": "text",
+            "path": "/lichao/dest",
+            "fileName": "haha.txt",
+            "writeMode": "append",
+            "fieldDelimiter": ",",
+            "column": [
+              {
+                "name": "id",
+                "type": "STRING"
+              },
+              {
+                "name": "name",
+                "type": "STRING"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

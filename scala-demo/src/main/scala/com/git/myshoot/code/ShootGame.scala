@@ -51,7 +51,7 @@ class ShootGame extends Panel {
    * @param g 画笔对象
    */
   def paintBullets(g: Graphics2D): Unit = {
-    for (iter <- 0 until bullets.length) {
+    for (iter <- bullets.indices) {
       if (iter < bullets.length) {
         val b = bullets(iter)
         g.drawImage(b.getImage(), b.getX(), b.getY(), null)
