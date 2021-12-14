@@ -10,7 +10,8 @@ import org.apache.spark.streaming.kafka010.{ConsumerStrategies, KafkaUtils, Loca
 import org.apache.spark.streaming.receiver.Receiver
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 
-object SparkStreaming04_Kafka {
+object
+SparkStreaming04_Kafka {
 
     def main(args: Array[String]): Unit = {
 

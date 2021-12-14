@@ -39,4 +39,5 @@ public class App
     public static String getLocalhostAddress() throws UnknownHostException {
         return InetAddress.getLocalHost().getCanonicalHostName();
     }
+
 }

@@ -9,16 +9,17 @@ object Spark01_SparkSQL_Basic {
     def main(args: Array[String]): Unit = {
 
         // TODO 创建SparkSQL的运行环境
-        val sparkConf = new SparkConf().setMaster("local[*]").setAppName("sparkSQL")
+        val sparkConf = new SparkConf().setMaster("local[*]").setAppName("Spark01_SparkSQL_Basic")
         val spark = SparkSession.builder().config(sparkConf).getOrCreate()
+        // 隐式类导入
         import spark.implicits._
 
 
         // TODO 执行逻辑操作
 
         // TODO DataFrame
-        //val df: DataFrame = spark.read.json("datas/user.json")
-        //df.show()
+        val df: DataFrame = spark.read.json("datas/person.json")
+        df.show()
 
         // DataFrame => SQL
 //        df.createOrReplaceTempView("user")
@@ -41,21 +42,21 @@ object Spark01_SparkSQL_Basic {
         //ds.show()
 
         // RDD <=> DataFrame
-        val rdd = spark.sparkContext.makeRDD(List((1, "zhangsan", 30), (2, "lisi", 40)))
-        val df: DataFrame = rdd.toDF("id", "name", "age")
-        val rowRDD: RDD[Row] = df.rdd
-
-        // DataFrame <=> DataSet
-        val ds: Dataset[User] = df.as[User]
-        val df1: DataFrame = ds.toDF()
-
-        // RDD <=> DataSet
-        val ds1: Dataset[User] = rdd.map {
-            case (id, name, age) => {
-                User(id, name, age)
-            }
-        }.toDS()
-        val userRDD: RDD[User] = ds1.rdd
+//        val rdd = spark.sparkContext.makeRDD(List((1, "zhangsan", 30), (2, "lisi", 40)))
+//        val df: DataFrame = rdd.toDF("id", "name", "age")
+//        val rowRDD: RDD[Row] = df.rdd
+//
+//        // DataFrame <=> DataSet
+//        val ds: Dataset[User] = df.as[User]
+//        val df1: DataFrame = ds.toDF()
+//
+//        // RDD <=> DataSet
+//        val ds1: Dataset[User] = rdd.map {
+//            case (id, name, age) => {
+//                User(id, name, age)
+//            }
+//        }.toDS()
+//        val userRDD: RDD[User] = ds1.rdd
 
 
         // TODO 关闭环境

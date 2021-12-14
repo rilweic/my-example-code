@@ -8,7 +8,7 @@ object BasicGrammar {
     val num2: Int = 10;
     //循环
     val arr = Array(3, 4, 56, 7)
-    for (i <- 0 until arr.length) {
+    for (i <- arr.indices) {
       print(arr(i) + "\t")
     }
 

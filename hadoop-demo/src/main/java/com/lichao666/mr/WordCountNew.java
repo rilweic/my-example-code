@@ -20,7 +20,7 @@ import java.io.IOException;
 import java.util.StringTokenizer;
 
 
-public class WordCount extends Configured implements Tool{
+public class WordCountNew extends Configured implements Tool{
 
     public static class WordCountMap extends
             Mapper<LongWritable, Text, Text, IntWritable> {
@@ -53,7 +53,7 @@ public class WordCount extends Configured implements Tool{
     }
 
     public static void main(String[] args) throws Exception {
-        int exitCode = ToolRunner.run(new WordCount(), args);
+        int exitCode = ToolRunner.run(new WordCountNew(), args);
         System.exit(exitCode);
     }
 
@@ -67,7 +67,7 @@ public class WordCount extends Configured implements Tool{
         conf.addResource("cdhhadoop/yarn-site.xml");
 
         Job job  = Job.getInstance(conf,"wc");
-        job.setJarByClass(WordCount.class);
+        job.setJarByClass(WordCountNew.class);
         job.setJobName("wordcount");
 
         job.setOutputKeyClass(Text.class);
