@@ -45,4 +45,9 @@ object Test11_ControlAbstraction {
     println(i)
 
   }
+
+
+  def abcontrol():Unit = {
+
+  }
 }

@@ -19,7 +19,9 @@ object Spark01_SparkSQL_Basic {
 
         // TODO DataFrame
         val df: DataFrame = spark.read.json("datas/person.json")
+//        val df: DataFrame = spark.read.json(spark.sparkContext.wholeTextFiles("datas/person.json").values)
         df.show()
+
 
         // DataFrame => SQL
 //        df.createOrReplaceTempView("user")

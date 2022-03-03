@@ -13,7 +13,7 @@ object Test17_CommonWordCount {
     // 1. 对字符串进行切分，得到一个打散所有单词的列表
 //    val wordList1: List[Array[String]] = stringList.map(_.split(" "))
 //    val wordList2: List[String] = wordList1.flatten
-//    println(wordList2)
+//    println(wordList1)
     val wordList = stringList.flatMap(_.split(" "))
     println(wordList)
 
@@ -33,5 +33,11 @@ object Test17_CommonWordCount {
       .take(3) // 取前3
 
     println(sortList)
+
+    val list11 = List(Array(1,2,3),2,3)
+    val list22 = list11.map(x => x match {
+      case s:Int => List(s)
+      case s:Array[Int] => s
+    })
   }
 }

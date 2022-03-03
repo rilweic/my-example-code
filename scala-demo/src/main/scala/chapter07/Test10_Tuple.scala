@@ -6,6 +6,8 @@ object Test10_Tuple {
     val tuple: (String, Int, Char, Boolean) = ("hello", 100, 'a', true)
     println(tuple)
 
+    val (s,i,c,b) = tuple
+
     // 2. 访问数据
     println(tuple._1)
     println(tuple._2)

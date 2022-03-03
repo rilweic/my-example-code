@@ -30,10 +30,10 @@ object FavTeacher {
     //排序
     val sorted: RDD[(String, Int)] = reduced.sortBy(_._2, false)
     //触发Action执行计算
-    val reslut: Array[(String, Int)] = sorted.collect()
+    val result: Array[(String, Int)] = sorted.collect()
 
     //打印
-    println(reslut.toBuffer)
+    println(result.toBuffer)
 
     sc.stop()
 

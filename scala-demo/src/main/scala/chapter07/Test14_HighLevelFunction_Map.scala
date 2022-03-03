@@ -37,12 +37,20 @@ object Test14_HighLevelFunction_Map {
     // 将一组字符串进行分词，并保存成单词的列表
     val strings: List[String] = List("hello world", "hello scala", "hello java", "we study")
     val splitList: List[Array[String]] = strings.map( _.split(" ") )    // 分词
-    val flattenList = splitList.flatten    // 打散扁平化
+    val flattenList: List[String] = splitList.flatten // 打散扁平化
     println(flattenList)
 
     val listx: List[List[Int]] = List(List(1, 2), List(3, 4))
     val ints: List[Int] = listx.flatMap(_.map(item => item * 2))
     println(ints)
+    println("-----------------------------")
+    val list33 = List(List(1,2),3)
+    list33.map {
+      case y: Int => y
+      case z: List[Int] => z.map(_ * 2)
+    }.foreach(println)
+
+    println("-----------------------------")
 
     val listx2 = listx.map(_.map( item => item * 2))
     println(listx2.flatten)
@@ -64,5 +72,14 @@ object Test14_HighLevelFunction_Map {
     // 给定一组词汇，按照单词的首字母进行分组
     val wordList = List("china", "america", "alice", "canada", "cary", "bob", "japan")
     println( wordList.groupBy( _.charAt(0) ) )
+
+
+    val weeks: Seq[String] = Seq("Sun","Mon","Tus","Wen","Thri","Fri","Sat")
+    val res = weeks.zipWithIndex.flatMap { pair =>
+      val (s,i) = pair
+      if (i % 2 == 0) Some(s) else None
+    }
+
+
   }
 }

@@ -22,6 +22,9 @@ object Test06_ConstructorParams {
     val student6 = new Student6("cary", 25, "atguigu")
     println(s"student6: name = ${student6.name}, age = ${student6.age}")
     student6.printInfo()
+
+    val student7 = new StudentX("cary", 25)("beijing")
+//    student7.printInfo()
   }
 }
 
@@ -62,3 +65,14 @@ class Student6(var name: String, var age: Int){
     println(s"student6: name = ${name}, age = $age, school = $school")
   }
 }
+
+class StudentX(var name:String,var age:Int)(var address:String){
+  println("hahhahahahah")
+  printInfo()
+  def printInfo(){
+    println(s"student7: name = ${name}, age = $age, address = $address")
+  }
+  println("bbbbbbbb")
+
+}
+

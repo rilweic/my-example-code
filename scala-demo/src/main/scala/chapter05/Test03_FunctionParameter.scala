@@ -47,5 +47,23 @@ object Test03_FunctionParameter {
     val res = f6(f5,"lichao",111)
 
     println(res)
+
+
+    def f7():String={
+      "hello world"
+    }
+
+    def f8(func:() => String):String={
+    func() + " !"
+
+    }
+
+    println(f8(f7))
+
+   def addOne(num:Int): Int ={
+      0 + num
+   }
+
+
   }
 }

@@ -10,20 +10,20 @@ object Spark02_SparkSQL_UDF {
 
         // TODO 创建SparkSQL的运行环境
         val sparkConf = new SparkConf().setMaster("local[*]").setAppName("sparkSQL")
-        val spark = SparkSession.builder().config(sparkConf).getOrCreate()
-        import spark.implicits._
+        val sparkSession = SparkSession.builder().config(sparkConf).getOrCreate()
+        import sparkSession.implicits._
 
-        val df = spark.read.json("datas/user.json")
+        val df = sparkSession.read.json("datas/user.json")
         df.createOrReplaceTempView("user")
 
-        spark.udf.register("prefixName", (name:String) => {
+        sparkSession.udf.register("prefixName", (name:String) => {
             "Name: " + name
         })
 
-        spark.sql("select age, prefixName(username) from user").show
+        sparkSession.sql("select age, prefixName(username) from user").show
 
 
         // TODO 关闭环境
-        spark.close()
+        sparkSession.close()
     }
 }
