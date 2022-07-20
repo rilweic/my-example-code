@@ -11,7 +11,8 @@ public class CallBackProducer {
     public static void main(String[] args) {
         Properties props = new Properties();
         // Kafka 服务端的主机名和端口号
-        props.put("bootstrap.servers", "sjztzcxt-lf224-cs07w:9092");
+        props.put("bootstrap.servers", "localhost:29092");
+//        props.put("bootstrap.servers", "node1:9092,node2:9092,node3:9092");
         // 等待所有副本节点的应答
         props.put("acks", "all");
         // 消息发送最大尝试次数
@@ -29,7 +30,7 @@ public class CallBackProducer {
         KafkaProducer<String, String> kafkaProducer = new KafkaProducer<>(props);
 
         for (int i = 0; i < 50; i++) {
-            kafkaProducer.send(new ProducerRecord<String, String>("first", "world" + i), new Callback() {
+            kafkaProducer.send(new ProducerRecord<String, String>("test-flink", "hello " + i), new Callback() {
                 @Override
                 public void onCompletion(RecordMetadata metadata, Exception e) {
                     if (metadata != null) {

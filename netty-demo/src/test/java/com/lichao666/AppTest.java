@@ -17,10 +17,4 @@ public class AppTest
     {
         assertTrue( true );
     }
-
-    @Test
-    public void testEqual(){
-        System.out.println("学博".equals("学博"));
-    }
-
 }

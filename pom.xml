@@ -28,6 +28,7 @@
         <module>spark-demo</module>
         <module>flink-demo</module>
         <module>log4j2-bug</module>
+        <module>netty-demo</module>
     </modules>
 
     <properties>
