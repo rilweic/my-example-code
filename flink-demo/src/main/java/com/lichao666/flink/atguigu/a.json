@@ -6,7 +6,7 @@
     "ws_url": "http://mirai:8080"
   },
   "openai": {
-    "api_key": "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"
+    "api_key": "xxxxxxxxxxxxxxxxx"
   },
   "text_to_image": {
     "font_size": 30,
