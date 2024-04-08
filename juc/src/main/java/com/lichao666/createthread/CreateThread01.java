@@ -1,5 +1,7 @@
 package com.lichao666.createthread;
 
+import java.util.concurrent.Executors;
+
 public class CreateThread01 {
     public static void main(String[] args) {
         for (int i = 0; i < 100; i++) {
@@ -7,6 +9,8 @@ public class CreateThread01 {
             t.setName("线程"+i);
             t.start();
         }
+        Thread t1 = Executors.defaultThreadFactory().newThread(() -> System.out.println("hello !"));
+
     }
 }
 

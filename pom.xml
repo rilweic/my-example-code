@@ -29,6 +29,8 @@
         <module>flink-demo</module>
         <module>log4j2-bug</module>
         <module>netty-demo</module>
+        <module>janusgraph-demo</module>
+        <module>java-demo</module>
     </modules>
 
     <properties>

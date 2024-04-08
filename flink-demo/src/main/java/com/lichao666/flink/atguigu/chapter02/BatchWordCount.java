@@ -8,6 +8,7 @@ package com.lichao666.flink.atguigu.chapter02;
  * Created by  wushengran
  */
 
+import org.apache.flink.api.common.functions.FlatMapFunction;
 import org.apache.flink.api.common.typeinfo.Types;
 import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.api.java.operators.AggregateOperator;

@@ -4,6 +4,8 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import java.util.Objects;
+
 /**
  * Unit test for simple App.
  */
@@ -20,7 +22,13 @@ public class AppTest
 
     @Test
     public void testEqual(){
-        System.out.println("学博".equals("学博"));
+        System.out.println("小学博士".equals("⼩学博⼠"));
     }
+
+    @Test
+    public void testEqual2(){
+        System.out.println(Objects.equals("小学博士","⼩学博⼠"));
+    }
+
 
 }
