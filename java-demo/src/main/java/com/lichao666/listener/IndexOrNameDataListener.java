@@ -2,9 +2,7 @@ package com.lichao666.listener;
 
 import com.alibaba.excel.context.AnalysisContext;
 import com.alibaba.excel.event.AnalysisEventListener;
-import com.alibaba.excel.util.FileUtils;
 import com.alibaba.excel.util.ListUtils;
-
 import com.alibaba.excel.util.StringUtils;
 import com.lichao666.endity.IndexRowData;
 import com.lichao666.endity.TableColumn;
@@ -14,8 +12,11 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.net.URL;
-import java.util.*;
+import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class IndexOrNameDataListener extends AnalysisEventListener<IndexRowData> {
     /**

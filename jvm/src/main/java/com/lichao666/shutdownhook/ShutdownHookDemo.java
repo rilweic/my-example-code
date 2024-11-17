@@ -12,7 +12,7 @@ public class ShutdownHookDemo {
             }
         });
         TimeUnit.SECONDS.sleep(3);
-        System.out.println("main done.");
+        System.out.println("main done.通商宽⾐");
 
     }
 }
