@@ -1,14 +1,15 @@
 package com.lichao666.okhttp;
 
-import com.alibaba.excel.util.CollectionUtils;
 import com.google.gson.Gson;
 import okhttp3.*;
+import org.apache.commons.collections4.CollectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.Base64;
+import java.util.Collection;
 import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
@@ -86,7 +87,7 @@ public class OkHttpUtil {
         try {
 
             FormBody.Builder builder = new FormBody.Builder();
-            if (!CollectionUtils.isEmpty(params)) {
+            if (!CollectionUtils.isEmpty((Collection<?>) params)) {
                 params.forEach(builder::add);
             }
             FormBody body = builder.build();
