@@ -1,0 +1,15 @@
+extend type Query {
+    users: [User]!
+    organizationUsers(orgId: ID!): [User]!
+}
+
+extend type Mutation {
+    createUser(name: String!, email: String!, orgId: ID!): User!
+}
+
+type User {
+    id: ID!
+    name: String!
+    email: String!
+    organization: Organization
+}

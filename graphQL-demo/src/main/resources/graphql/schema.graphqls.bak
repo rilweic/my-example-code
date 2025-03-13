@@ -1,0 +1,145 @@
+"""
+用户实体
+"""
+type User {
+    id: ID!
+    username: String!
+    email: String!
+    firstName: String
+    lastName: String
+    role: Role!
+    createdAt: String!
+    updatedAt: String
+    organization: Organization
+}
+
+"""
+组织实体
+"""
+type Organization {
+    id: ID!
+    name: String!
+    description: String
+    address: String
+    phoneNumber: String
+    email: String
+    createdAt: String!
+    updatedAt: String
+    users: [User]
+}
+
+"""
+用户角色枚举
+"""
+enum Role {
+    ADMIN
+    MANAGER
+    USER
+}
+
+"""
+分页信息
+"""
+type PageInfo {
+    totalElements: Int!
+    totalPages: Int!
+    currentPage: Int!
+    pageSize: Int!
+}
+
+"""
+用户分页结果
+"""
+type UserPage {
+    content: [User]!
+    pageInfo: PageInfo!
+}
+
+"""
+组织分页结果
+"""
+type OrganizationPage {
+    content: [Organization]!
+    pageInfo: PageInfo!
+}
+
+"""
+用户创建输入
+"""
+input UserCreateInput {
+    username: String!
+    email: String!
+    password: String!
+    firstName: String
+    lastName: String
+    role: Role!
+    organizationId: ID
+}
+
+"""
+用户更新输入
+"""
+input UserUpdateInput {
+    username: String
+    email: String
+    firstName: String
+    lastName: String
+    role: Role
+    organizationId: ID
+}
+
+"""
+组织创建输入
+"""
+input OrganizationCreateInput {
+    name: String!
+    description: String
+    address: String
+    phoneNumber: String
+    email: String
+}
+
+"""
+组织更新输入
+"""
+input OrganizationUpdateInput {
+    name: String
+    description: String
+    address: String
+    phoneNumber: String
+    email: String
+}
+
+"""
+查询根类型
+"""
+type Query {
+    # 用户查询
+    getUserById(id: ID!): User
+    getAllUsers(page: Int = 0, size: Int = 10): UserPage!
+    searchUsers(keyword: String!, page: Int = 0, size: Int = 10): UserPage!
+
+    # 组织查询
+    getOrganizationById(id: ID!): Organization
+    getAllOrganizations(page: Int = 0, size: Int = 10): OrganizationPage!
+    searchOrganizations(keyword: String!, page: Int = 0, size: Int = 10): OrganizationPage!
+}
+
+"""
+变更根类型
+"""
+type Mutation {
+    # 用户变更
+    createUser(input: UserCreateInput!): User!
+    updateUser(id: ID!, input: UserUpdateInput!): User!
+    deleteUser(id: ID!): Boolean!
+
+    # 组织变更
+    createOrganization(input: OrganizationCreateInput!): Organization!
+    updateOrganization(id: ID!, input: OrganizationUpdateInput!): Organization!
+    deleteOrganization(id: ID!): Boolean!
+
+    # 用户和组织关联
+    assignUserToOrganization(userId: ID!, organizationId: ID!): User!
+    removeUserFromOrganization(userId: ID!): User!
+}
