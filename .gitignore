@@ -57,3 +57,7 @@ hs_err_pid*
 target/
 !**/src/main/**/target/
 !**/src/test/**/target/
+datas
+gyny2.xlsx
+java-demo/src/main/resources/L2-L5.xlsx
+java-demo/src/test/resources/L2-L5.xlsx
